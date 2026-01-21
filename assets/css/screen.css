@@ -13,9 +13,8 @@
 body {
   font-family: "Gill Sans", sans-serif;
   line-height: 1.6;
-  color: var(--text-dark);
-  background-color: #fff;
-  height: 100%;
+  color: var(--text-main); /* Fixed from --text-dark */
+  background-color: var(--bg-body); /* Use the variable here too */
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -34,11 +33,20 @@ main {
 
 .main-layout {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 350px 1fr; /* Sidebar width and flexible content */
   gap: 40px;
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 20px;
+  align-items: start;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 /* HEADER AND NAV */
@@ -57,6 +65,7 @@ header {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo-area {
@@ -167,50 +176,55 @@ q + p {
 
 /* Style the clickable button */
 details summary {
-    cursor: pointer;
-    color: var(--text-main);
-    font-weight: bold;
-    font-size: 0.9rem;
-    padding: 5px 0;
-    list-style: none; /* Removes default arrow in some browsers */
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
+  cursor: pointer;
+  color: var(--text-main);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  list-style: none; /* Removes default arrow in some browsers */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
 }
 
-details ul li 
-{
-    list-style: circle;
+details ul li {
+  list-style: circle;
 }
 
 /* Custom Arrow Effect */
 details summary::before {
-    content: '▶';
-    display: inline-block;
-    font-size: 0.7rem;
-    margin-right: 10px;
-    transition: transform 0.2s ease;
+  content: "▶";
+  display: inline-block;
+  font-size: 0.7rem;
+  margin-right: 10px;
+  transition: transform 0.2s ease;
 }
 
 /* Rotate the arrow when open */
 details[open] summary::before {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 /* Style the text inside the expansion */
 .details-content {
-    padding: 10px 0 10px 20px;
-    border-left: 2px solid var(--border-color);
-    margin-top: 5px;
-    font-size: 0.95rem;
-    color: var(--text-main);
-    animation: slideDown 0.3s ease-out; /* Smooth entrance */
+  padding: 10px 0 10px 20px;
+  border-left: 2px solid var(--border-color);
+  margin-top: 5px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  animation: slideDown 0.3s ease-out; /* Smooth entrance */
 }
 
 /* Simple animation for opening */
 @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* FOOTER */
@@ -251,14 +265,100 @@ footer {
 }
 
 /* RESPONSIVENESS */
-@media (max-width: 768px) {
-  .main-layout {
-    grid-template-columns: 1fr;
+/* Tablet View */
+@media (max-width: 1024px) {
+  .professional-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
   }
+}
 
+/* Mobile View */
+@media (max-width: 768px) {
   .header-content {
     flex-direction: column;
-    gap: 15px;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .logo-area {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  header span {
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+
+  nav {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; /* Space between buttons */
+    padding: 0 10px; /* Extra side padding for mobile wrapping */
+    margin: 0;
+  }
+
+  nav ul li a {
+    padding: 10px 15px; /* Bigger "tap target" for thumbs */
+    background: rgba(255, 255, 255, 0.1); /* Subtle button background */
+    border-radius: 8px;
+    display: block;
+    white-space: nowrap; /* Prevents text inside a button from breaking */
+  }
+
+  #theme-toggle {
+    margin-left: 5px;
+    padding: 8px 16px; /* Match the size of the other links */
+  }
+
+  .professional-grid {
+    grid-template-columns: 1fr; /* Force 1 column on mobile */
+    padding: 0 15px;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  nav ul li a {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr; /* Stacks sidebar on top of text */
+    gap: 20px;
+    text-align: center;
+  }
+
+  aside {
+    max-width: 300px; /* Prevents the profile pic from becoming giant on tablets */
+    margin: 0 auto;
+  }
+
+  article h2 {
+    border-left: none; /* Removes the side border for centered mobile text */
+    border-bottom: 3px solid var(--accent-color);
+    padding-left: 0;
+    display: inline-block;
+    padding-bottom: 5px;
   }
 }
 
