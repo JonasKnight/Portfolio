@@ -1,80 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Author" content="Jonas Huylebroeck" />
     <title>Jonas Huylebroeck | Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/media/portrait.svg" />
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/screen.css" />
     <script src="assets/js/script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="header-content">
-            <div class="logo-area">
-                <img src="images/transparent.png" alt="Portrait" id="ico" />
-                <span>Jonas Huylebroeck</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#studies">Studies</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="highlight">Projects</a></li>
-                    <li>
-                        <button id="theme-toggle" aria-label="Toggle Dark Mode" style="cursor: pointer; background: none; border: 1px solid white; color: white; border-radius: 5px; padding: 2px 8px;">
-                            🌙
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+      <div class="header-content">
+        <div class="logo-area">
+          <img src="images/transparent.png" alt="Portrait" id="ico" />
+          <span>Jonas Huylebroeck</span>
         </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Intro</a></li>
+            <li><a href="studies.html">Studies</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="highlight">Projects</a></li>
+            <li>
+              <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Work in Progress :]</h1>
+      <section class="hero">
+        <h1>Work in Progress :]</h1>
+      </section>
+
+      <div class="container main-layout">
+        <aside>
+          <img
+            src="images/Profile Pic.jpg"
+            alt="Jonas Profile Picture"
+            class="profile-img"
+          />
+        </aside>
+
+        <section class="content">
+          <article id="intro">
+            <h2>Who am I?</h2>
+            <p>Add your introduction text here...</p>
+          </article>
+
+          <article id="studies">
+            <h2>Professional life</h2>
+            <p>Details about your career and education...</p>
+          </article>
+
+          <article id="hobbies">
+            <h2>Personal life</h2>
+            <p>What you do in your free time...</p>
+          </article>
+
+          <article id="contact">
+            <h2>Contact me</h2>
+            <ul class="social-links">
+              <li><a href="https://www.twitch.tv/amppharos">Twitch</a></li>
+              <li><a href="https://x.com/amppharos">Twitter</a></li>
+              <li>
+                <a href="https://www.instagram.com/amppharostv/">Instagram</a>
+              </li>
+              <li><a href="https://www.youtube.com/@amppharos">Youtube</a></li>
+            </ul>
+          </article>
         </section>
-
-        <div class="container main-layout">
-            <aside>
-                <img src="images/Profile Pic.jpg" alt="Jonas Profile Picture" class="profile-img">
-            </aside>
-
-            <section class="content">
-                <article id="intro">
-                    <h2>Who am I?</h2>
-                    <p>Add your introduction text here...</p>
-                </article>
-
-                <article id="studies">
-                    <h2>Professional life</h2>
-                    <p>Details about your career and education...</p>
-                </article>
-
-                <article id="hobbies">
-                    <h2>Personal life</h2>
-                    <p>What you do in your free time...</p>
-                </article>
-
-                <article id="contact">
-                    <h2>Contact me</h2>
-                    <ul class="social-links">
-                        <li><a href="https://www.twitch.tv/amppharos">Twitch</a></li>
-                        <li><a href="https://x.com/amppharos">Twitter</a></li>
-                        <li><a href="https://www.instagram.com/amppharostv/">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/@amppharos">Youtube</a></li>
-                    </ul>
-                </article>
-            </section>
-        </div>
+      </div>
     </main>
 
     <footer>
-        <p>Copyright © 2026 Jonas Huylebroeck. All rights reserved.</p>
+      <p>Copyright © 2026 Jonas Huylebroeck. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
