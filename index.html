@@ -1,63 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="Jonas Huylebroeck" />
+    <title>Jonas Huylebroeck | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/screen.css" />
+    <script src="assets/js/script.js" defer></script>
+</head>
 
-    <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/screen.css" type="text/css" />
-    <link rel="icon" href="assets/media/portrait.svg" />
-    <script src="assets/js/script.js"></script>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-area">
+                <img src="images/transparent.png" alt="Portrait" id="ico" />
+                <span>Jonas Huylebroeck</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#studies">Studies</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="highlight">Projects</a></li>
+                    <li>
+                        <button id="theme-toggle" aria-label="Toggle Dark Mode" style="cursor: pointer; background: none; border: 1px solid white; color: white; border-radius: 5px; padding: 2px 8px;">
+                            🌙
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <title>Portfolio</title>
-  </head>
-
-  <body>
     <main>
-      <div class="container">
-        <header>
-          <img src="assets/media/portrait.svg" alt="Menu icon" id="ico" />
-          <span>Jonas Huylebroeck</span>
-          <nav>
-            <ul>
-              <li><a href="#intro">Intro</a></li>
-              <li><a href="#studies">Studies</a></li>
-              <li><a href="#hobbies">Hobbies</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="">Projects</a></li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-        <h1>WIP :]</h1>
-      <div class="container">
-        <aside>
-          <img src="images/Profile Pic.jpg" alt="ProilePic">
-        </aside>
-        <article id="intro">
-          <h1>Who am I?</h1>
-        </article>
-        <article id="studies">
-          <h1>Professional life</h1>
-        </article>
-        <article id="hobbies">
-          <h1>Personal life</h1>
-        </article>
-        <article id="contact">
-          <h1>Contact me</h1>
-          <ul>
-            <li><a href="">Twitch</a></li>
-            <li><a href="">Twitter</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Youtube</a></li>
-          </ul>
-        </article>
-      </div>
-      
-      <footer>
-        <b>Copyright © 2022 Jonas Huylebroeck. All rights reserved.</b>
-        <div id="socials"></div>
-      </footer>
+        <section class="hero">
+            <h1>Work in Progress :]</h1>
+        </section>
+
+        <div class="container main-layout">
+            <aside>
+                <img src="images/Profile Pic.jpg" alt="Jonas Profile Picture" class="profile-img">
+            </aside>
+
+            <section class="content">
+                <article id="intro">
+                    <h2>Who am I?</h2>
+                    <p>Add your introduction text here...</p>
+                </article>
+
+                <article id="studies">
+                    <h2>Professional life</h2>
+                    <p>Details about your career and education...</p>
+                </article>
+
+                <article id="hobbies">
+                    <h2>Personal life</h2>
+                    <p>What you do in your free time...</p>
+                </article>
+
+                <article id="contact">
+                    <h2>Contact me</h2>
+                    <ul class="social-links">
+                        <li><a href="https://www.twitch.tv/amppharos">Twitch</a></li>
+                        <li><a href="https://x.com/amppharos">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/amppharostv/">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@amppharos">Youtube</a></li>
+                    </ul>
+                </article>
+            </section>
+        </div>
     </main>
-  </body>
+
+    <footer>
+        <p>Copyright © 2026 Jonas Huylebroeck. All rights reserved.</p>
+    </footer>
+</body>
 </html>
