@@ -13,8 +13,8 @@
 body {
   font-family: "Gill Sans", sans-serif;
   line-height: 1.6;
-  color: var(--text-main); /* Fixed from --text-dark */
-  background-color: var(--bg-body); /* Use the variable here too */
+  color: var(--text-main);
+  background-color: var(--bg-body);
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@ main {
 
 .main-layout {
   display: grid;
-  grid-template-columns: 350px 1fr; /* Sidebar width and flexible content */
+  grid-template-columns: 350px 1fr;
   gap: 40px;
   max-width: 1200px;
   margin: 2rem auto;
@@ -162,32 +162,32 @@ q + p {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1200px;
-  margin: 3rem auto; /* Adds space between Hero and Grid */
+  margin: 3rem auto;
   padding: 0 20px;
 }
 
 .pro-section {
-  background: var(--bg-body); /* Changed to body bg to contrast with hero */
+  background: var(--bg-body);
   padding: 25px;
   border-radius: 12px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Style the clickable button */
 details summary {
   cursor: pointer;
   color: var(--text-main);
   font-weight: bold;
   font-size: 0.9rem;
   padding: 5px 0;
-  list-style: none; /* Removes default arrow in some browsers */
+  list-style: none;
   display: flex;
   align-items: center;
   transition: color 0.3s ease;
 }
 
-details ul li, .topic-text ul li {
+details ul li,
+.topic-text ul li {
   list-style: circle;
 }
 
@@ -212,7 +212,7 @@ details[open] summary::before {
   margin-top: 5px;
   font-size: 0.95rem;
   color: var(--text-main);
-  animation: slideDown 0.3s ease-out; /* Smooth entrance */
+  animation: slideDown 0.3s ease-out;
 }
 
 /* Simple animation for opening */
@@ -230,8 +230,8 @@ details[open] summary::before {
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 3rem 1rem; /* Increased vertical padding for breathing room */
-  background: #1a1a1a; /* Slightly darker to match pro look */
+  padding: 3rem 1rem;
+  background: #1a1a1a;
   color: white;
   margin-top: 4rem;
   flex-shrink: 0;
@@ -240,35 +240,35 @@ footer {
 .social-links {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allows links to wrap on small mobile screens */
-  gap: 20px; /* Perfect spacing between items */
+  flex-wrap: wrap;
+  gap: 20px;
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0; /* Space between links and copyright */
+  margin: 0 0 1.5rem 0;
 }
 
 .social-links a {
   text-decoration: none;
-  color: #bbb; /* Subtle grey for links */
+  color: #bbb;
   font-weight: bold;
   font-size: 0.9rem;
   padding: 8px 16px;
   border: 1px solid #333;
-  border-radius: 20px; /* Pill shape looks great in footers */
+  border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 .social-links a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
-  background: rgba(21, 226, 178, 0.05); /* Very subtle glow */
+  background: rgba(21, 226, 178, 0.05);
 }
 
 /* RESPONSIVENESS */
 /* Tablet View */
 @media (max-width: 1024px) {
   .professional-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
@@ -280,60 +280,49 @@ footer {
     text-align: center;
     padding: 1rem 0;
   }
-
   .logo-area {
     flex-direction: column;
     margin-bottom: 15px;
   }
-
   header span {
     margin-left: 0;
     margin-top: 10px;
     font-size: 1.2rem;
   }
-
   nav {
     width: 100%;
     padding: 10px 0;
   }
-
   nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px; /* Space between buttons */
-    padding: 0 10px; /* Extra side padding for mobile wrapping */
+    gap: 12px;
+    padding: 0 10px;
     margin: 0;
-    
   }
-
   nav ul li a {
-    padding: 10px 15px; /* Bigger "tap target" for thumbs */
-    background: rgba(255, 255, 255, 0.1); /* Subtle button background */
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     display: block;
-    white-space: nowrap; /* Prevents text inside a button from breaking */
+    white-space: nowrap;
   }
-
   #theme-toggle {
     margin-left: 5px;
-    padding: 8px 16px; /* Match the size of the other links */
+    padding: 8px 16px;
   }
-
   .professional-grid {
-    grid-template-columns: 1fr; /* Force 1 column on mobile */
+    grid-template-columns: 1fr;
     padding: 0 15px;
     margin-top: 1rem;
   }
-
   .hero {
     padding: 2rem 1rem;
   }
-
   .hero h1 {
     font-size: 1.6rem;
   }
-
   nav ul li a {
     padding: 8px 12px;
     background: rgba(255, 255, 255, 0.1);
@@ -344,18 +333,16 @@ footer {
 
 @media (max-width: 900px) {
   .main-layout {
-    grid-template-columns: 1fr; /* Stacks sidebar on top of text */
+    grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
   }
-
   aside {
-    max-width: 300px; /* Prevents the profile pic from becoming giant on tablets */
+    max-width: 300px;
     margin: 0 auto;
   }
-
   article h2 {
-    border-left: none; /* Removes the side border for centered mobile text */
+    border-left: none;
     border-bottom: 3px solid var(--accent-color);
     padding-left: 0;
     display: inline-block;
@@ -372,13 +359,12 @@ footer {
 
 .topic-row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Equal 2-column split */
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
   margin-bottom: 5rem;
   align-items: center;
 }
 
-/* This creates the alternating effect */
 .topic-row.reverse .topic-text {
   order: 2;
 }
@@ -404,17 +390,16 @@ footer {
 
 /* Mobile Responsiveness for Personal Page */
 @media (max-width: 900px) {
-  .topic-row, .topic-row.reverse {
-    grid-template-columns: 1fr; /* Stack on mobile */
+  .topic-row,
+  .topic-row.reverse {
+    grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
   }
-  
   .topic-row.reverse .topic-text,
   .topic-row.reverse .topic-image {
-    order: unset; /* Return to natural order on mobile for better flow */
+    order: unset;
   }
-
   .topic-text h2 {
     border-left: none;
     border-bottom: 3px solid var(--accent-color);
@@ -424,21 +409,21 @@ footer {
 
 /* Container to maintain 16:9 aspect ratio for the Twitch player */
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 15px; /* Matches your image styling */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* DARK MODE */
@@ -455,8 +440,6 @@ footer {
   cursor: pointer;
   padding: 4px 12px;
   border-radius: 5px;
-
-  /* Resetting default button styles */
   background: none;
   font-size: 1.1rem;
   transition: all 0.3s ease;
@@ -480,5 +463,5 @@ body {
   color: var(--text-main);
   transition:
     background-color 0.3s,
-    color 0.3s; /* Smooth transition */
+    color 0.3s;
 }
