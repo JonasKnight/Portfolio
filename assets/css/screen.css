@@ -187,7 +187,7 @@ details summary {
   transition: color 0.3s ease;
 }
 
-ul li {
+details ul li, .topic-text ul li {
   list-style: circle;
 }
 
@@ -304,6 +304,7 @@ footer {
     gap: 12px; /* Space between buttons */
     padding: 0 10px; /* Extra side padding for mobile wrapping */
     margin: 0;
+    
   }
 
   nav ul li a {
