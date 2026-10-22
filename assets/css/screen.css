@@ -27,8 +27,21 @@ body {
   background: var(--bg-hero);
 }
 
+.hero p.subtitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--heading-color);
+  margin-top: 0.5rem;
+}
+
 main {
   flex: 1 0 auto;
+}
+
+.intro-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
 }
 
 .main-layout {
@@ -107,7 +120,7 @@ nav ul li a:hover,
   color: var(--accent-color) !important;
 }
 
-/* LAYOUT */
+/* LAYOUT & CARDS */
 aside .profile-img {
   width: 100%;
   border-radius: 12px;
@@ -115,15 +128,58 @@ aside .profile-img {
 }
 
 article {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
+}
+
+article:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Side-by-Side Summary Card */
+.summary-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.profile-image-wrapper {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.summary-text {
+  flex-grow: 1;
+}
+
+.summary-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Core Competencies Grid inside Pro-Section */
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.competencies-grid article {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 h1 {
   text-transform: uppercase;
   color: var(--heading-color);
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
   font-size: 2rem;
 }
 
@@ -140,6 +196,7 @@ h3 {
   text-transform: uppercase;
   color: var(--heading-color);
   font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 h4 {
@@ -172,6 +229,7 @@ q + p {
   border-radius: 12px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
 }
 
 details summary {
@@ -267,7 +325,8 @@ footer {
 /* RESPONSIVENESS */
 /* Tablet View */
 @media (max-width: 1024px) {
-  .professional-grid {
+  .professional-grid,
+  .competencies-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
@@ -275,6 +334,22 @@ footer {
 
 /* Mobile View */
 @media (max-width: 768px) {
+  .summary-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-image-wrapper {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .competencies-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .header-content {
     flex-direction: column;
     text-align: center;
@@ -302,10 +377,10 @@ footer {
     margin: 0;
   }
   nav ul li a {
-    padding: 10px 15px;
+    padding: 8px 12px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    display: block;
+    border-radius: 4px;
+    display: inline-block;
     white-space: nowrap;
   }
   #theme-toggle {
@@ -322,12 +397,6 @@ footer {
   }
   .hero h1 {
     font-size: 1.6rem;
-  }
-  nav ul li a {
-    padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    display: inline-block;
   }
 }
 
