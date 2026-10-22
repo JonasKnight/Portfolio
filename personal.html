@@ -11,7 +11,7 @@
     <script src="assets/js/script.js" defer></script>
   </head>
 
-  <body>
+  <body data-theme="light">
     <header>
       <div class="header-content">
         <div class="logo-area">
@@ -37,87 +37,84 @@
     <main>
       <section class="hero">
         <h1>Life Beyond the Career</h1>
+        <p>A look into personal interests, creative pursuits, and technical homelab engineering.</p>
       </section>
 
       <div class="container personal-content">
         <section class="topic-row">
           <div class="topic-text">
-            <h2>Gaming</h2>
+            <h2>Gaming &amp; High-Performance Hardware</h2>
             <p>
-              I am passionate about diverse gaming genres, ranging from JRPGs to
-              Nintendo games. My current setup features:
+              I am passionate about diverse gaming genres and hardware performance optimization. My current high-performance workstation and gaming rig features:
             </p>
             <ul>
-              <li>NZXT H9 Flow All Black</li>
-              <li>Asus ROG STRIX X670E-E GAM. WIFI X670E</li>
-              <li>Asus 12GB D6X RTX 4070 Ti PROART OC</li>
-              <li>
-                AMD Ryzen 7 7800X3D, 4,2 GHz (5,0 GHz Turbo Boost) socket AM5
-                processor
-              </li>
-              <li>Corsair 64 GB DDR5-5600 2x32 GB Kit</li>
-              <li>2x Samsung 990 PRO 2 TB SSD</li>
-              <li>be quiet! Pure Power 12M modulaire 1000 watt PSU</li>
+              <li>NZXT H9 Flow All Black Chassis</li>
+              <li>Asus ROG STRIX X670E-E Gaming WiFi Motherboard</li>
+              <li>Asus ProArt GeForce RTX 4070 Ti 12GB OC</li>
+              <li>AMD Ryzen 7 7800X3D 8-Core Processor</li>
+              <li>Corsair Vengeance 64GB DDR5-5600 RAM Kit</li>
+              <li>2x Samsung 990 PRO 2TB NVMe SSDs</li>
+              <li>be quiet! Pure Power 12 M Modular 1000W PSU</li>
             </ul>
           </div>
           <div class="topic-image">
-            <img src="images/steam.png" alt="Steam" class="profile-img">
+            <img src="images/steam.png" alt="Hardware Setup" class="profile-img">
           </div>
         </section>
 
         <section class="topic-row reverse">
           <div class="topic-text">
-            <h2>Content Creation</h2>
+            <h2>Content Creation &amp; Media Production</h2>
             <p>
-              I enjoy sharing my gameplay and related challenge runs to Twitch
-              and uploading those vods to my YouTube Channel. In the future, I
-              plan to expand this by learning video editing to enhance the
-              quality of my content. It is a great way to create a community and
-              connect with a similar minded audience. My current streaming setup
-              features:
+              I enjoy producing and streaming gaming challenge runs and video content, utilizing professional-grade audio and video equipment to ensure high production standards. This pursuit allows me to refine video editing skills and connect with a broad technical community. My studio setup includes:
             </p>
             <ul>
-              <li>Focusrite Scarlett 2i2 4th Gen</li>
-              <li>Beyerdynamic DT 770 Pro</li>
-              <li>Rode NT1-A</li>
-              <li>Philips Evnia 49M2C8900/00</li>
-              <li>Philips 325B1L/00</li>
-              <li>Huion Kamvas Pro 16 GT-156</li>
-              <li>Logitech G502 X Plus</li>
-              <li>Logitech MX Mechanical</li>
+              <li>Focusrite Scarlett 2i2 4th Gen Audio Interface</li>
+              <li>Beyerdynamic DT 770 Pro Studio Headphones &amp; Rode NT1-A Microphone</li>
+              <li>Philips Evnia 49M2C8900/00 Ultrawide Primary Monitor</li>
+              <li>Huion Kamvas Pro 16 Drawing Display</li>
+              <li>Logitech G502 X Plus Mouse &amp; MX Mechanical Keyboard</li>
             </ul>
           </div>
           <div class="topic-image">
             <div class="video-container">
-              <iframe title="Twitch" src="https://player.twitch.tv/?channel=amppharos&parent=jonasknight.github.io" height="300" allowfullscreen="true"></iframe>
+              <iframe title="Stream Preview" src="https://player.twitch.tv/?channel=amppharos&parent=jonasknight.github.io" height="300" allowfullscreen="true"></iframe>
             </div>
           </div>
         </section>
 
         <section class="topic-row">
           <div class="topic-text">
-            <h2>Passions</h2>
+            <h2>Passions &amp; Creative Pursuits</h2>
             <p>
-              I love the world building and storytelling of Dungeons &amp; Dragons.
-              I recently started as a Dungeon Master, crafting custom campaigns
-              and complex narratives for my friends. Next to DMing, I also enjoy
-              playing as a character in other campaigns.
+              I appreciate complex world-building and storytelling, actively engaging as a Dungeon Master for custom tabletop roleplaying campaigns.
               <br>
-              In the past, I played a lot of guitar as well. I plan to pick this
-              hobby back up, but this time focusing on electric bass.
+              In addition to narrative design, I have a deep interest in digital design, web layout aesthetics, and music composition, with ongoing plans to expand my proficiency into electric bass.
               <br>
-              Additionally, I have a keen interest in digital design, mostly
-              related to digital drawing and web design. While my drawing skills
-              are still developing, I find web design particularly engaging and
-              plan to explore it further.
-              <br>
-              Besides my online profile, I also enjoy going
-              to the gym and working out. It's a great way to stay healthy and
-              clear my mind.
+              Outside of technical and creative hobbies, I maintain a disciplined physical fitness routine with regular gym workouts to ensure balance and focus.
             </p>
           </div>
           <div class="topic-image">
-            <img src="images/dnd.png" alt="D&D Campaigns" class="profile-img">
+            <img src="images/dnd.png" alt="Creative Design" class="profile-img">
+          </div>
+        </section>
+
+        <section class="topic-row reverse">
+          <div class="topic-text">
+            <h2>Practical Labs &amp; Homelab Architecture</h2>
+            <p>
+              To continuously sharpen my enterprise engineering competencies, I architect and maintain a robust, self-hosted homelab environment mirroring modern cloud and network infrastructure:
+            </p>
+            <ul>
+              <li><strong>Proxmox VE Host</strong> AskHand N100 Mini PC running Proxmox VE 9.1.5[cite: 5, 9], managing persistent LXC containers and VMs across tiered NVMe/SSD/HDD storage with real-time API monitoring.</li>
+              <li><strong>Containerized AI Stack:</strong> Self-hosted Open-WebUI instance running on Docker Compose for secure, private AI processing and automated workflows[cite: 5, 6].</li>
+              <li><strong>Network Edge &amp; Security:</strong> TP-Link Omada ecosystem (managed PoE switches, Wi-Fi 6 access points)[cite: 5, 9]. Implements Pi-hole DNS sinkholes, Tailscale mesh VPN subnet routing, and Nginx Proxy Manager[cite: 5, 6].</li>
+              <li><strong>Self-Hosted Services:</strong> Deployed Home Assistant OS (HAOS), n8n workflow automation, Nextcloud secure cloud storage, OpenProject, and XWiki knowledge bases[cite: 5, 6].</li>
+              <li><strong>Workstation Node:</strong> ASUS ROG STRIX desktop running CachyOS Linux (Arch-based, Kernel 7.2+) with Hypervisor-Enforced Code Integrity (HVCI), Secure Boot, and DMA Protection enabled[cite: 8].</li>
+            </ul>
+          </div>
+          <div class="topic-image">
+            <img src="assets/media/proxmox.svg" alt="Homelab Infrastructure" class="profile-img">
           </div>
         </section>
       </div>
